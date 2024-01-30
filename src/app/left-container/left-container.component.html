@@ -1,0 +1,36 @@
+<!-- <p>
+  <mat-toolbar style="position: sticky; top: 0">
+    <span>World News</span>
+  </mat-toolbar>
+</p> -->
+<mat-toolbar 
+class="flex justify-content-between"
+style="position: sticky; top: 0; z-index: 1000">
+  <span>World News</span>
+</mat-toolbar>
+
+
+  <div class="left-container">
+    <mat-card 
+      *ngFor="let nd of topHeadlinesData"
+      class="example-card"
+      style="background-color: aliceblue; border-bottom: 1px solid #ccc;"
+      
+    >
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title style="font-size: medium"
+            >{{ nd.title }}
+          </mat-card-title>
+
+          <img mat-card-sm-image src="{{ nd.urlToImage }}" alt="photo" />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        {{ nd.content }}<br />
+
+        <a href="{{ nd.url }}" target="_blank">click here for more</a>
+      </mat-card-content>
+    </mat-card>
+  </div>
+

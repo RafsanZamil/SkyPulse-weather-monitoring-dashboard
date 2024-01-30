@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: accent;
+}
+
+.mat-card {
+  margin-top: 80px;
+  padding: 40px;
+  width: 350px;
+}
+
+.m-auto {
+  margin: auto;
+}
+/* Add this to your component's stylesheet or styles.css */
+.small-card {
+  width: 400px;
+  height: 350px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}

@@ -1,0 +1,51 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d6d7da ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.weather-container {
+  height: 85vh;
+  width: 85vw;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .weather-container {
+    flex-direction: column;
+    height: 95%;
+    width: 95%;
+    overflow: auto;
+  }
+}
+@media (max-width: 1440px) {
+  .weather-container {
+    flex-direction: column;
+    overflow: auto;
+    height: 90%;
+    width: 90%;
+  }
+}
+
+.left-container {
+  flex: 4;
+  background-color: #ffffff;
+  overflow: auto;
+}
+.right-container {
+  flex: 6;
+  background-color: #ffffff;
+  overflow: auto;
+}

@@ -1,0 +1,292 @@
+
+<mat-toolbar
+    color="primary"
+    class="flex justify-content-between"
+    style="position: sticky; top: 0; z-index: 1000"
+    >Monitor Weather
+
+    <a href="/login" mat-raised-button> Login</a>
+  </mat-toolbar>
+
+<div class="right-container">
+  
+  <router-outlet></router-outlet>
+
+  <div class="right-container-nav-bar">
+    <div class="nav-bar-tabs">
+      <div
+        class="today"
+        (click)="onTodayClick()"
+        [className]="today == true ? 'today today-active ' : 'today'"
+      >
+        Today
+      </div>
+      <div
+        class="week"
+        (click)="onWeekClick()"
+        [className]="week == true ? 'week week-active ' : 'week'"
+      >
+        Week
+      </div>
+    </div>
+
+    <!-- <div class="nav-bar-metric">
+      <div
+        class="celcius"
+        (click)="onCelsiusClick()"
+        [className]="celsius == true ? 'celcius celcius-active ' : 'celcius'"
+      >
+        °C
+      </div>
+      <div
+        class="farenheit"
+        (click)="onFarenheitClick()"
+        [className]="
+          farenheit == true ? 'farenheit farenheit-active ' : 'farenheit'
+        "
+      >
+        °F
+      </div>
+    </div> -->
+  </div>
+  <div class="right-container-data-box">
+    <div class="right-container-week-cards" *ngIf="week == true">
+      <div class="card">
+        <div class="card-day">Sun</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Mon</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C -</span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Tue</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Wed</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Thurs</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Friday</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C - </span
+          ><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">Sat</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-container-today-cards" *ngIf="today == true">
+      <div class="card">
+        <div class="card-day">11.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">2.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15°C</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">5.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">8.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">11.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">2.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-day">5.00</div>
+        <div class="card-temp-img">
+          <img src="./../../assets/images/sun.png" alt="" />
+        </div>
+        <div class="card-temp-value">
+          <span class="temp-max">25°C- </span><span class="temp-min">15</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-container-todays-highlights">
+      <div class="right-container-todays-highlight-title">
+        Todays Highlights
+      </div>
+      <div class="right-container-todays-highlight-cards">
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            UV Index
+          </div>
+          <div class="gauge">
+            <div class="gauge__body">
+              <div class="gauge__fill"></div>
+              <div class="gauge__cover"></div>
+            </div>
+          </div>
+          <div class="right-container-todays-highlight-value">5</div>
+        </div>
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            Wind Status
+          </div>
+          <div class="wind-status-value">7.70KM/H</div>
+
+          <div class="wind-status-logo">
+            <img src="./../../assets/images/wind.png" alt="" />
+          </div>
+        </div>
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            Sunrie & Sunset
+          </div>
+
+          <div class="sunrise-sunset-value">
+            <div class="sunrise">
+              <div class="sunrise-img">
+                <img src="./../../assets/images/sun.png" alt="" />
+              </div>
+              <div class="sunrise-time">6.35 am</div>
+            </div>
+            <div class="sunset">
+              <div class="sunset-img">
+                <img src="./../../assets/images/sun.png" alt="" />
+              </div>
+              <div class="sunset-time">6.35 pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container-todays-highlight-cards">
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            Humidity
+          </div>
+          <div
+            class="wind-status-value"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            7.70 %
+          </div>
+
+          <div
+            class="humidity-summary"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            Normal
+          </div>
+        </div>
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            Visibility
+          </div>
+          <div
+            class="wind-status-value"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            7.70 %
+          </div>
+
+          <div
+            class="humidity-summary"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            Average
+          </div>
+        </div>
+        <div class="right-container-todays-highlight-card">
+          <div class="right-container-todays-highlight-card-title">
+            Air Quality
+          </div>
+          <div
+            class="wind-status-value"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            7.70 %
+          </div>
+
+          <div
+            class="humidity-summary"
+            style="align-self: self-start; margin-left: 20px"
+          >
+            Unhealthy
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

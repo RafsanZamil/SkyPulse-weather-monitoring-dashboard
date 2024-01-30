@@ -1,0 +1,34 @@
+.justify-content-between {
+  justify-content: space-between;
+}
+.left-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+  border-bottom-right-radius: 20px;
+}
+.left-container-nav-bar {
+  flex: 2;
+}
+
+.center-item{
+  border-bottom-right-radius: 20px;;
+
+}
+.example-card {
+  width: 100%; /* Adjust the card width as needed */
+ /* Adjust the margin around each card as needed */
+  
+  font-size: small; /* Prevent cards from shrinking when the container is not wide enough */
+}
+/* .left-card{
+ 
+  border: 1px solid #004033;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
